@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
+    public function __construct()
+    {
+        set_time_limit(8000000);
+    }
+    
     /**
      * Register api
      *

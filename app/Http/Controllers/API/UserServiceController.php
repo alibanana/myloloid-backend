@@ -11,6 +11,11 @@ use App\User;
 
 class UserServiceController extends BaseController
 {
+    public function __construct()
+    {
+        set_time_limit(8000000);
+    }
+    
     // Get list of all Users
     public function getUsers(){
         $users = User::all();

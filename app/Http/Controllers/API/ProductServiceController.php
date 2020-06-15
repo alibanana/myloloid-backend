@@ -15,6 +15,11 @@ use App\Photo;
 
 class ProductServiceController extends BaseController
 {
+    public function __construct()
+    {
+        set_time_limit(8000000);
+    }
+
     // Get all categories
     public function getCategories()
     {

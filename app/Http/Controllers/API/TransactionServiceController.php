@@ -21,13 +21,10 @@ use App\Transfer;
 
 class TransactionServiceController extends BaseController
 {
-    // Test
-    public function test(){
-        if(!Customer::where('user_id', 'c_user_id')->exists()){
-            return $this->sendResponse(['true'], 'Customer created successfully.');
-        }
+    public function __construct()
+    {
+        set_time_limit(8000000);
     }
-
 
     // Get Transaction Data
     public function getTransactions()
