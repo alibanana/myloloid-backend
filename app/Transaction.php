@@ -27,6 +27,6 @@ class Transaction extends Model
 
     public function delivery()
     {
-        return $this->belongsTo('App\delivery');
+        return $this->belongsTo('App\Delivery');
     }
 }
