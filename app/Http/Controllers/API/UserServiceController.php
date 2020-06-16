@@ -38,8 +38,6 @@ class UserServiceController extends BaseController
     public function createUser(Request $request){
         $input = $request->all();
 
-        dd($request->all());
-
         $validation = Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
